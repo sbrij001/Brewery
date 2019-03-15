@@ -53,6 +53,8 @@
 }
 
 .boardCard {
+  float: left;
+  width: 30%;
   background-color: white;
   border: 3px red solid;
 }

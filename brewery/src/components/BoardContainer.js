@@ -20,6 +20,7 @@ class BoardContainer extends Component {
   }
 
   spitOutBoards = () => {
+    
     let boardies = this.props.userBoards.map(board => {
       return "hi";
     })

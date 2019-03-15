@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
 class BrewCards extends Component {
+  state = {
+    boardName: null
+  }
 
   handleMoveBoard = () => {
 
@@ -18,9 +21,14 @@ class BrewCards extends Component {
 
   submitNewBoard = (e) => {
     e.preventDefault()
-    this.props.beerMover(this.props.beerObj);
+    this.props.beerMover(this.props.beerObj, this.state.boardName);
   }
 
+  selectFunc = (e) => {
+    this.setState({
+      boardName: e.target.value
+    })
+  }
 
   render(){
     return (
@@ -29,7 +37,7 @@ class BrewCards extends Component {
       <p>Phone: {this.props.beerObj.phone} city :{this.props.beerObj.city} State: {this.props.beerObj.state}</p>
 
       <form onSubmit={this.submitNewBoard}>
-        <select>
+        <select onChange={this.selectFunc}>
         <option>Select Board</option>
         {this.boardOptions()}
         </select>
