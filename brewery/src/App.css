@@ -31,3 +31,33 @@
     transform: rotate(360deg);
   }
 }
+
+.index{
+  width: 30%;
+  background-color: pink;
+  display: inline;
+  float: left;
+
+}
+
+.board{
+  width: 70%;
+  background-color: gray;
+  display: inline;
+  float: right;
+
+}
+
+.brew{
+  border-style: dotted;
+}
+
+.boardCard {
+  background-color: white;
+  border: 3px red solid;
+}
+
+.createBoard {
+  display: block;
+  margin: auto;
+}
