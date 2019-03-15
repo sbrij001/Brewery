@@ -14,11 +14,10 @@ class IndexContainer extends Component {
     }))
   }
 
+
   render(){
-    console.log(this.state);
-    
     let brewCards = this.state.breweries.map((beer) => {
-      return <BrewCard key={beer.id} beerObj={beer}/>
+      return <BrewCard key={beer.id} beerObj={beer} boards={this.props.boards} beerMover={this.props.beerMover}/>
     })
 
     return (
